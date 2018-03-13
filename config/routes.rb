@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get '/customers/alphabetized', to: 'alphabetized#index'
+
   resources :customers, only: [:index]
 
   root to: 'customers#index'
