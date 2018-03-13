@@ -1,0 +1,9 @@
+<h1>
+    <% if current_page?(root_path) %>
+        All Customers
+    <% elsif current_page?('/customers/alphabetized') %>
+        All Customers - Alphabetical Order
+    <% elsif current_page?('/customers/missing_email') %>
+        All Customers - Missing Email
+    <% end %>
+</h1>

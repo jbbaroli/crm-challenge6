@@ -1,7 +1,11 @@
 <div class="container">
     <h3><%= customer.full_name %></h3>
     <%= image_tag(customer.full_name + ".jpg", size: "300x200")%>
-    <!-- Placeholder for province information -->
-    <p><%= customer.phone_number %></p>
-    <p><%= customer.email_address %></p>
+    <% if customer.phone_number != "" %>
+        <p>Phone: <%= customer.phone_number %></p>
+    <% end %>
+    <% if customer.email_address != "" %>
+        <p>Email: <%= customer.email_address %></p>
+    <% end %>
+    <p>About: <%= customer.notes %></p>
 </div>
