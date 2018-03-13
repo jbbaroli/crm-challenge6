@@ -1,9 +1,8 @@
-<h1>All Customers</h1>
-<% @customers.each do |customer| %>
-    <div class="container">
-        <%= image_tag(customer.full_name + "jpg", size: "300x200")%>
-        <!-- Placeholder for province information -->
-        <p><%= customer.phone_number %></p>
-        <p><%= customer.email_address %></p>
-    </div>
-<% end %>
+<p><%= customer.full_name %></p>
+<div class="container">
+    <h3><%= customer.full_name %></h3>
+    <%= image_tag(customer.full_name + ".jpg", size: "300x200")%>
+    <!-- Placeholder for province information -->
+    <p><%= customer.phone_number %></p>
+    <p><%= customer.email_address %></p>
+</div>
